@@ -8,3 +8,325 @@ paragraph yellow: #ECB12F
 links blue: #2E71A6
 footer links grey: #454245
 */
+
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;}
+
+img{
+    width:100px;
+    height:auto;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+/* NAV MENU */
+.navmenu{
+    background-color: #540B51;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menubar{
+    display: flex;
+    align-items: center;
+}
+
+.menubar img{
+    width: 150px;
+    margin: 20px 30px;
+
+}
+.bsearch, .bmenu{
+    background: transparent;
+    border: transparent;
+    margin:30px 0px;
+}
+
+.bmenu {
+    margin-left: 10px;
+}
+.bsearch img, .bmenu img{
+    width: 20px;
+}
+
+.desktop {
+    display:none;
+}
+
+.longmenu, .menu-options{
+    display:none;
+    text-decoration: none;
+    list-style: none;
+    color:white;
+}
+
+.longmenu li, .menu-options li{
+    margin: 10px;
+    font-weight: 600;
+}
+
+.buttons-menu{
+    align-items: center;
+    margin-right: 25px;
+}
+
+.button-try a{
+    background-color:white;
+    color:#540B51;
+    border-radius: 10px; 
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width:1024px){
+    .mobile{
+        display:none;
+    }
+
+    .longmenu{
+        display:flex;
+        
+    }
+    
+    .buttons-menu{
+        display: flex;
+    }
+
+    .menu-options{
+        display:flex;
+    }
+
+}
+
+
+
+/* HEADER SECTION */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #540B51;
+}
+
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+    .header__content h1{
+        font-size: 40px;
+        margin: 38px 72px;
+    }
+
+    .header__text{
+        display: flex;
+        font-size: 16px;
+        margin: 0;
+
+    }
+    .header__text p:first-child{
+        font-weight: 700;
+        margin-right: 7px;
+        color: #ECB12F;
+    }
+
+
+    .header__buttons{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+        .email, .google{
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+
+            text-transform: uppercase;
+            font-weight: 800;
+            width: 100%;
+            height: 60px;
+            border-radius: 7px;
+            margin: 8px 0px;
+        
+        }
+
+        .email{
+            background: white;
+            color: #540B51;
+        }
+
+        .email p{
+            padding-left: 30px;
+        }
+        .google{
+            background: #4285F4;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+            .google img{
+                width: 24px;
+                height: auto;
+                background: white;
+                border-radius: 5px;
+                padding: 10px;
+                margin-left: 7px;
+                margin-top: 7px;
+            }
+
+            .google p{
+                width:100%;
+            }
+    .header__img{
+        width: 100%;
+        height: 275px;;
+        margin-top: 22px;
+        overflow: hidden;
+
+    }
+
+    .header__img img{
+        width: 150%;
+    }
+
+    /* MEDIA QUERIES */
+
+    @media screen and (min-width:768px){
+        header{
+            flex-direction: row;
+            background-image: url(/lab-css-flexbox-slack/starter_code/images/background-singup.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header__content{
+            margin: 20px;
+            align-items:unset;
+            color: white;
+            text-align: left;
+        }
+        .header__content h1{
+            width: 227px;
+            margin:0;
+        }
+        .header__img{
+            width: 100%;
+            height: 514px;
+            margin-top: unset;
+            overflow: hidden;
+
+        }
+
+        .header__img img{
+            width: 535px;
+            margin-left: 64px;
+            margin-top: 50px;
+        }
+
+        .header__text{
+            width: 359px;
+        }
+
+        .header__buttons{
+            width:100%;
+        }
+    }
+    @media screen and (min-width:1024px){
+        .header__img img{
+            margin-left: 119px;
+            margin-top: 50px;
+        }
+
+        header{
+            padding: 39px;
+            width:100%;
+           } 
+    
+    }
+    @media screen and (min-width:1440px){
+       header{
+        padding: 39px;
+        width:100%;
+       } 
+
+       .header__content{
+        width: 40%;
+       }
+       .header__content h1 {
+        width: 285px;
+        }
+       .header__img{
+        width:60%;
+       }
+       .header__buttons{
+        display: flex;
+        flex-direction: row;
+       }
+       .email, .google{
+        margin: 0px 8px;
+       }
+       .header__text{
+        margin: 5px 8px;
+       }
+    }
+    
+/* COMPANIES SECTION */
+
+/* .companies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3EAE2;
+}
+    .companies p{
+        margin: 28px 0px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+
+.companiesLogo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10PX;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.companiesLogo img{
+    width: 150px;
+    height: auto;
+    margin: 0px 10px;
+}
+
+.companiesLogo img:nth-child(2){
+    width:100px;
+}
+.companiesLogo img:nth-child(3){
+    width:85px;
+}
+
+.companiesLogo img:nth-child(4){
+    width:65px;
+}
+ */
+
+
